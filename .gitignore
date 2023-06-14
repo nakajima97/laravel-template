@@ -29,6 +29,6 @@ yarn-error.log
 .php-cs-fixer.cache
 
 # Local config See: https://cs.symfony.com/doc/config.html
-.php-cs-fixer.php
+# .php-cs-fixer.php
 
 # End of https://www.toptal.com/developers/gitignore/api/php-cs-fixer
