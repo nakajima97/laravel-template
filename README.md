@@ -10,3 +10,10 @@ docker run --rm \
     laravelsail/php81-composer:latest \
     composer install --ignore-platform-reqs
 '''
+
+# 主要パッケージ
+- Laravel sail
+- Larastan
+
+# Larastanの実行
+'./vendor/bin/phpstan analyse'
