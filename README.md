@@ -17,3 +17,6 @@ docker run --rm \
 
 # Larastanの実行
 './vendor/bin/phpstan analyse'
+
+# PHP CS Fixerの実行
+'tools/php-cs-fixer/vendor/bin/php-cs-fixer fix app'
