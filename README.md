@@ -2,14 +2,14 @@
 Laravelで開発を行う際のテンプレートリポジトリ
 
 # git clone後に実行するコマンド
-'''
+```
 docker run --rm \
     -u "$(id -u):$(id -g)" \
     -v $(pwd):/var/www/html \
     -w /var/www/html \
     laravelsail/php81-composer:latest \
     composer install --ignore-platform-reqs
-'''
+```
 
 # 主要パッケージ
 - Laravel sail
