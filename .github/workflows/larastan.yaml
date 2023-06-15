@@ -34,4 +34,4 @@ jobs:
         uses: tj-actions/changed-files@v29.0.3
 
       - name: Run PHPStan
-        run: tools/php-cs-fixer/vendor/bin/php-cs-fixer fix app
+        run: ./vendor/bin/phpstan analyse
