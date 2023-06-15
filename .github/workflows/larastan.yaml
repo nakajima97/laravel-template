@@ -1,0 +1,37 @@
+name: LaraStan
+on:
+  pull_request:
+
+jobs:
+  phpstan:
+    # Ubuntuの最新版を利用する
+    runs-on: ubuntu-latest
+    steps:
+      # リポジトリの最新ファイル1世代分だけをチェックアウト
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      # PHP環境のセットアップ
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          # PHPのバージョンを7.4に指定
+          php-version: '8.2'
+          tools: composer, cs2pr
+          coverage: none
+
+      - name: Composer install
+        run: composer install
+
+      # setup-phpにphpstanはあるがLarastanがなさそうなので、個別にインストール
+      - name: Larastan install
+        run: composer require nunomaduro/larastan --dev
+
+      # リポジトリの中で今回のPushで変更があったファイルだけを取得し、スペースでつなげた文字列を取得する
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v29.0.3
+
+      - name: Run PHPStan
+        run: ./vendor/bin/phpstan analyse
