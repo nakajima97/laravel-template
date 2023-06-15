@@ -6,7 +6,7 @@ return (new PhpCsFixer\Config())
         'array_indentation' => true,
         'array_syntax' => ['syntax' => 'short'],
         'combine_consecutive_unsets' => true,
-        'class_attributes_separation' => ['elements' => ['method' => 'one',]],
+        'class_attributes_separation' => ['elements' => ['method' => 'one', ]],
         'multiline_whitespace_before_semicolons' => false,
         'single_quote' => true,
 
@@ -99,4 +99,16 @@ return (new PhpCsFixer\Config())
     ])
     // ->setIndent("\t")
     ->setLineEnding("\n")
+    ->setFinder(
+        PhpCsFixer\Finder::create()
+        ->exclude([ // 除外ファイル
+            'vendor',
+            'config',
+            'database',
+            'database',
+            'bootstrap',
+            'public'
+        ])
+    ->in(__DIR__)
+    )
 ;
