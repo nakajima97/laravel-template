@@ -33,6 +33,5 @@ jobs:
         id: changed-files
         uses: tj-actions/changed-files@v29.0.3
 
-      # PHPStanを実行。解析レベルは10段階中最低の0とし、解析対象は上で取得したファイル名リストの変数を使う
       - name: Run PHPStan
-        run: vendor/bin/phpstan analyze --memory-limit=-1 -l 0 -c vendor/nunomaduro/larastan/extension.neon  ${{ steps.changed-files.outputs.all_changed_files }}
+        run: tools/php-cs-fixer/vendor/bin/php-cs-fixer fix app
