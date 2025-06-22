@@ -17,6 +17,7 @@ mkdir -p app/Responders/Web
 mkdir -p app/Support/Enums
 mkdir -p app/Support/Traits
 mkdir -p app/Exceptions
+# app/Providers は Laravel デフォルトで存在
 ```
 
 ### 1.2 基底クラスの作成

@@ -88,6 +88,11 @@ app/
 │   ├── Community.php
 │   ├── Post.php
 │   └── CommunityUser.php       # 中間テーブル
+├── Providers/                  # Laravelサービスプロバイダー
+│   ├── AppServiceProvider.php
+│   ├── AuthServiceProvider.php
+│   ├── EventServiceProvider.php
+│   └── RouteServiceProvider.php
 ├── Policies/                   # 認可ロジック
 │   ├── UserPolicy.php
 │   ├── CommunityPolicy.php
@@ -143,6 +148,7 @@ app/
 - **Requests**: バリデーションルール
 - **Resources**: APIシリアライゼーション
 - **Policies**: 認可ロジック
+- **Providers**: サービスプロバイダー（DI設定、アプリケーション初期化）
 
 ## データフロー
 

@@ -77,6 +77,7 @@ app/
 ├── Responders/     # レスポンス整形
 ├── Http/           # Laravel標準（最小限）
 ├── Models/         # Eloquentモデル
+├── Providers/      # Laravelサービスプロバイダー
 ├── Support/        # ヘルパー・ユーティリティ
 └── Exceptions/     # カスタム例外
 ```
