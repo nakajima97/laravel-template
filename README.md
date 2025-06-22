@@ -2,6 +2,18 @@
 
 このプロジェクトは Laravel + Sail を使用した開発環境テンプレートです。
 
+## アーキテクチャ設計
+
+本プロジェクトではADRパターン（Action-Domain-Responder）とUseCaseパターンを組み合わせた「なんちゃってクリーンアーキテクチャ」を採用しています。
+
+詳細なアーキテクチャ設計・実装ガイドライン・移行戦略については、`docs`ディレクトリ内のドキュメントを参照してください：
+
+- **📋 [docs/README.md](./docs/README.md)** - アーキテクチャドキュメント全体の概要
+- **📋 [docs/architecture.md](./docs/architecture.md)** - アーキテクチャ設計書
+- **🛠️ [docs/implementation-guide.md](./docs/implementation-guide.md)** - 実装ガイドライン
+- **🔄 [docs/migration-strategy.md](./docs/migration-strategy.md)** - 移行戦略ガイド
+- **💻 [docs/examples.md](./docs/examples.md)** - 実装例集
+
 ## セットアップ
 
 ### 1. 開発環境の起動
