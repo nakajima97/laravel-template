@@ -1,4 +1,4 @@
-name: Lint Check ()
+name: Lint Check (Larastan)
 
 on:
   pull_request:
